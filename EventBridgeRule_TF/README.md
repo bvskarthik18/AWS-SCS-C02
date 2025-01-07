@@ -102,7 +102,8 @@ Defines input variables required for the Terraform configuration:
 6. **Verify the setup: After applying the plan, Terraform will output key details such as the EC2 instance ID, SNS topic ARN, and CloudWatch Event Rule ARN.**
 7. **Test the setup: To test the setup, start or stop the EC2 instance manually via the AWS Console or using the AWS CLI. You should receive an email notification when the state of the instance changes.**
 
-**Outputs**
+## Outputs
+
 After running `terraform apply`, Terraform will provide the following outputs:
 
 - `instance_id`: The ID of the EC2 instance.
@@ -118,11 +119,12 @@ event_name = "arn:aws:events:us-west-2:123456789012:rule/MyEC2StateChangeEvent"
 
 ```
 
-**Additional Considerations**
+## Additional Considerations
+
 - **Security**: Ensure that your AWS credentials (access keys) are kept secure. Consider using environment variables or AWS IAM roles for enhanced security.
 - **SNS Subscription**: You will need to confirm your email subscription before receiving notifications. Check your inbox for a confirmation email from AWS SNS and confirm the subscription.
 - **IAM Permissions**: Ensure your AWS IAM user has sufficient permissions to create EC2 instances, SNS topics, CloudWatch event rules, and related resources.
 
-**Conclusion**
+## Conclusion
 
 In this tutorial, we’ve successfully set up an EventBridge rule using Terraform to monitor EC2 instance state changes and send email notifications. This solution automates the process, making it easy to track EC2 status changes in your AWS environment. By leveraging Terraform, we ensure that the setup is reproducible and consistent. With this setup, you can stay informed about important EC2 events without manually checking the instance state.
