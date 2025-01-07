@@ -26,5 +26,10 @@ This setup automates the creation of AWS resources required to monitor EC2 insta
 ## Directory Structure
 
 ```ruby
-EventBridgeRule_TF/ │ ├── README.md # This file ├── main.tf # Terraform configuration for resource provisioning ├── output.tf # Output values from Terraform ├── terraform.tfvars # Variables for AWS credentials and configuration ├── variables.tf # Input variable definitions for Terraform
+EventBridgeRule_TF/
+├── README.md # This file
+├── main.tf # Terraform configuration for resource provisioning
+├── output.tf # Output values from Terraform
+├── terraform.tfvars # Variables for AWS credentials and configuration
+├── variables.tf # Input variable definitions for Terraform
 ```
